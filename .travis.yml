@@ -1,10 +1,19 @@
 language: python
 python:
-  - '3.6'
-  - '3.7'
-  - '3.8'
-  - '3.9'
+- '3.6'
+- '3.7'
+- '3.8'
+- '3.9'
 install:
-  - pip install ./
+- pip install ./
 script:
-  - pytest
+- pytest
+deploy:
+  provider: pypi
+  username: __token__
+  password:
+    secure: rNoOPfFoc0lrcAPk2uttiGEXoAZQN0LNOryCK09s5CEVVMezTdcLUaLd2qrQEjqsFQ9ctqwteOSMYGUtJfA/4hK28j9orBwz8173gOVQk/QIwjJYTD+1Hzgu6m1UBkv5FwjVtcqK/sL7wFb+tNrJZZ+mboExPBbSVyScU3X1USj/bmczI27Ph0q6xxDvJY+FG+p4u4OEMYyryfCD/teGKNDzC26x+jd9JY6y2Z/iq0pEbDgvum1+qTF+qPjVRGKn30OYmrXCPMSx8TjwdQVlwf2++Sn89XnClN6yYPRRqqklL/AUgkQdMGJs8pl4Z36S0savgM2tYSnl36YI5mOr66jZN+6TOvWp+Kq5Bml4PxWRBqAAQhIDEBe0Xt7vuBBHHs2b++rok7j0fTz+dhl/EBTpY44gh1Cz61xTWXumj3nCFbq/iouKtCq0rKGPOk8MaZERPy4cairgU7c0XKKfBXbf1V4qmnVBKOur7Exjl8IL96+vUkqLEfxATyaO+uKz0RiOLPOMXI9uSMvqkiismarzbri7a/UJDCrecLydgCOrCWatGMybu3CLKN7MviE3Pf++/B8iGsF93tCswbhjTqIn38tIpy0QR3lecPRFA+hFzPlxS7z8tAqSJbJtPlM7MI3BszFFFED8MnGGjGH7rmrw2F+4Ep4qwJfHV1tPyVU=
+  distributions: sdist bdist_wheel
+  on:
+    tags: true
+    python: '3.9'
