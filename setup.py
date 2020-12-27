@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setuptools.setup(
     name='pyxurls',
-    version='0.1.1',
+    version='0.1.2',
     author='Andy Tzeng',
     author_email='andytzeng@aol.tw',
     description='A regular expression based URL extractor which extracts URLs from text.',
@@ -20,6 +20,7 @@ setuptools.setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Text Processing',
@@ -29,6 +30,7 @@ setuptools.setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
+    keywords='url regex extract',
     install_requires=[
         'regex',
     ],

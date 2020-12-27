@@ -19,7 +19,6 @@ pip install pyxurls
 ### Extract URLs by strict strategy
 
 ```python
-
 import xurls
 
 extractor = xurls.Strict()
@@ -34,7 +33,6 @@ urls = extractor.findall('we have the link with scheme https://www.python.org an
 ### Extract URLs by relaxed strategy
 
 ```python
-
 import xurls
 
 extractor = xurls.Relaxed()
@@ -49,6 +47,7 @@ urls = extractor.findall('we have the link with scheme www.python.org and https:
 ### Extract URLs by limit scheme
 
 ```python
+import xurls
 
 # limit to https
 extractor = xurls.StrictScheme('https://')
