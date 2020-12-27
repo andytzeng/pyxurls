@@ -1,12 +1,12 @@
 import setuptools
 
 setuptools.setup(
-    name='xurls',
+    name='pyxurls',
     version='0.1.0',
     author='Andy Tzeng',
     author_email='andytzeng@aol.tw',
-    description='Extract URLs from text',
-    url='https://github.com/andytzeng/xurls',
+    description='A regular expression based URL extractor which extracts URLs from text.',
+    url='https://github.com/andytzeng/pyxurls',
     packages=setuptools.find_namespace_packages(include=['xurls']),
     classifiers=[
         'Development Status :: 3 - Alpha',
