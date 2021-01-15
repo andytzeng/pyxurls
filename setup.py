@@ -1,6 +1,24 @@
+from os import path
+
 import setuptools
 
-from os import path
+_no_re2, _no_regex = False, False
+
+try:
+    import re2 as re  # NOQA
+except ImportError:
+    _no_re2 = True
+
+
+try:
+    import regex as re  # NOQA
+except ImportError:
+    _no_regex = True
+
+if _no_re2 and _no_regex:
+    import warnings
+    warnings.warn('re2 or regex not installed. Please install either re2 or regex as engine')
+
 
 # read the contents of your README file
 this_directory = path.abspath(path.dirname(__file__))
@@ -9,7 +27,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setuptools.setup(
     name='pyxurls',
-    version='0.1.2',
+    version='0.2.0',
     author='Andy Tzeng',
     author_email='andytzeng@aol.tw',
     description='A regular expression based URL extractor which extracts URLs from text.',
@@ -31,8 +49,5 @@ setuptools.setup(
         'Programming Language :: Python :: 3.9',
     ],
     keywords='url regex extract',
-    install_requires=[
-        'regex',
-    ],
     python_requires='>=3.6',
 )
