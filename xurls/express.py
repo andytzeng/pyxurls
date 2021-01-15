@@ -2,16 +2,15 @@
 # Licensed under BSD 3-Clause License.
 import enum
 
-import regex
-
 from . import schemes
+from ._regex import re
 from .tlds import TLDs
 from .tlds_pseudo import PseudoTLDs
 from .unicode import otherPuncMinusDoubleQuote
 
 
 def any_of(*args):
-    return '({})'.format('|'.join([regex.escape(p) for p in args]))
+    return '({})'.format('|'.join([re.escape(p) for p in args]))
 
 
 class URIPattern(enum.Enum):

@@ -1,8 +1,7 @@
 # Copyright 2015 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
 # Licensed under BSD 3-Clause License.
-import regex
-
 from . import express
+from ._regex import LONEST_MATCH, re
 
 
 class Base(object):
@@ -13,7 +12,7 @@ class Base(object):
         if not self.pattern:
             raise ValueError('invalid pattern')
 
-        self.re_url = regex.compile(self.pattern, regex.POSIX)
+        self.re_url = re.compile(self.pattern, LONEST_MATCH)
 
     def findfirst(self, string):
         match = self.re_url.search(string)

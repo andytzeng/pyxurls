@@ -11,7 +11,8 @@ Thanks to [Daniel Martí](https://github.com/mvdan) invests the project [mvdan/x
 ## Installing
 
 ```bash
-pip install pyxurls
+# the alternative is regex as engine if you suffered installing on re2
+pip install google-re2 pyxurls
 ```
 
 ## Usage
