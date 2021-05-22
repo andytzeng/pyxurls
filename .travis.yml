@@ -9,7 +9,7 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install libre2-dev pybind11-dev
 install:
-  - pip install "google-re2==0.0.5" ./
+  - pip install "google-re2" ./
 script:
   - pytest
 deploy:
