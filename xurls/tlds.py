@@ -1,4 +1,4 @@
-# Copyright 2015 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
+# Copyright 2021 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
 # Licensed under BSD 3-Clause License.
 
 # Refer the tool unicodegen from mvdan.cc/xurls/v2
