@@ -8,7 +8,7 @@
 # Sources:
 #  * https://data.iana.org/TLD/tlds-alpha-by-domain.txt
 #  * https://publicsuffix.org/list/effective_tld_names.dat
-TLDs = [
+ASCII_TLDS = [
     'aaa',
     'aarp',
     'abarth',
@@ -1357,6 +1357,9 @@ TLDs = [
     'zone',
     'zuerich',
     'zw',
+]
+
+NON_ASCII_TLDS = [
     'ελ',
     'ευ',
     'бг',

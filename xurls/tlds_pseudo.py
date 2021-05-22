@@ -10,7 +10,7 @@
 #  * https://en.wikipedia.org/wiki/Category:Pseudo-top-level_domains
 #  * https://tools.ietf.org/html/draft-grothoff-iesg-special-use-p2p-names-00
 #  * https://www.iana.org/assignments/special-use-domain-names/special-use-domain-names.xhtml
-PseudoTLDs = [
+PSEUDO_TLDS = [
     'bit',  # Namecoin
     'example',  # Example domain
     'exit',  # Tor exit node

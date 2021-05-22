@@ -183,9 +183,8 @@ def test_loosen_extra_cases():
             ('foo.com bar.com', 'foo.com'),
             ('foo.com-foo', 'foo.com'),
             ('foo.company', True),
-            # We can't use \b to not match foo.com here, because that
-            # does't work for non-ASCII TLDs.
-            ('foo.comrandom', 'foo.com'),
+            ('foo.comrandom', None),
+            ('some.guy', None),
             ('foo.example', True),
             ('foo.i2p', True),
             ('foo.local', True),

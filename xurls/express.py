@@ -4,8 +4,8 @@ import enum
 
 from . import schemes
 from ._regex import re
-from .tlds import TLDs
-from .tlds_pseudo import PseudoTLDs
+from .tlds import ASCII_TLDS, NON_ASCII_TLDS
+from .tlds_pseudo import PSEUDO_TLDS
 from .unicode import otherPuncMinusDoubleQuote
 
 
@@ -53,8 +53,14 @@ def strict_exp():
 
 def relaxed_exp():
     punycode = r'xn--[a-z0-9-]+'
-    known_tlds = any_of(*(TLDs + PseudoTLDs))
-    site = rf'{URIPattern.domain.value}(?i:({punycode}|{known_tlds}))'
+
+    # Use \b to make sure ASCII TLDs are immediately followed by a word break.
+    # We can't do that with unicode TLDs, as they don't see following
+    # whitespace as a word break.
+    ascii_tlds = any_of(*(ASCII_TLDS + PSEUDO_TLDS))
+    non_ascii_tlds = any_of(*NON_ASCII_TLDS)
+    tlds = rf'(?i:({punycode}|{ascii_tlds}\b|{non_ascii_tlds}))'
+    site = URIPattern.domain.value + tlds
     hostname = rf'({site}|{URIPattern.ip_addr.value})'
     web_url = rf'{hostname}{URIPattern.port.value}(/|/{URIPattern.path_cont.value})?'
     return rf'{strict_exp()}|{web_url}'
