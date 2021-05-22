@@ -1,4 +1,4 @@
-# Copyright 2015 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
+# Copyright 2021 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
 # Licensed under BSD 3-Clause License.
 
 # Refer the tool unicodegen from mvdan.cc/xurls/v2
@@ -74,6 +74,7 @@ OFFICIAL = [
     'dweb',
     'ed2k',
     'elsi',
+    'embedded',
     'ens',
     'ethereum',
     'example',
@@ -218,6 +219,7 @@ OFFICIAL = [
     'msrp',
     'msrps',
     'mss',
+    'mt',
     'mtqp',
     'mumble',
     'mupdate',
@@ -265,12 +267,14 @@ OFFICIAL = [
     'rtsp',
     'rtsps',
     'rtspu',
+    'sarif',
     'secondlife',
     'secret-token',
     'service',
     'session',
     'sftp',
     'sgn',
+    'shc',
     'shttp',
     'sieve',
     'simpleledger',
@@ -324,6 +328,7 @@ OFFICIAL = [
     'vscode-insiders',
     'vsls',
     'wais',
+    'wcr',
     'webcal',
     'wifi',
     'wpid',

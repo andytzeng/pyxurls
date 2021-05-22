@@ -1,4 +1,4 @@
-# Copyright 2015 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
+# Copyright 2021 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
 # Licensed under BSD 3-Clause License.
 
 # Refer the tool unicodegen from mvdan.cc/xurls/v2
@@ -8,7 +8,7 @@
 # Sources:
 #  * https://data.iana.org/TLD/tlds-alpha-by-domain.txt
 #  * https://publicsuffix.org/list/effective_tld_names.dat
-TLDs = [
+ASCII_TLDS = [
     'aaa',
     'aarp',
     'abarth',
@@ -222,7 +222,6 @@ TLDs = [
     'cars',
     'casa',
     'case',
-    'caseih',
     'cash',
     'casino',
     'cat',
@@ -234,7 +233,6 @@ TLDs = [
     'cbs',
     'cc',
     'cd',
-    'ceb',
     'center',
     'ceo',
     'cern',
@@ -472,7 +470,6 @@ TLDs = [
     'frontier',
     'ftr',
     'fujitsu',
-    'fujixerox',
     'fun',
     'fund',
     'furniture',
@@ -638,11 +635,9 @@ TLDs = [
     'it',
     'itau',
     'itv',
-    'iveco',
     'jaguar',
     'java',
     'jcb',
-    'jcp',
     'je',
     'jeep',
     'jetzt',
@@ -758,7 +753,6 @@ TLDs = [
     'ltda',
     'lu',
     'lundbeck',
-    'lupin',
     'luxe',
     'luxury',
     'lv',
@@ -837,6 +831,7 @@ TLDs = [
     'mtr',
     'mu',
     'museum',
+    'music',
     'mutual',
     'mv',
     'mw',
@@ -847,7 +842,6 @@ TLDs = [
     'nab',
     'nagoya',
     'name',
-    'nationwide',
     'natura',
     'navy',
     'nba',
@@ -860,7 +854,6 @@ TLDs = [
     'network',
     'neustar',
     'new',
-    'newholland',
     'news',
     'next',
     'nextdirect',
@@ -909,7 +902,6 @@ TLDs = [
     'onion',
     'onl',
     'online',
-    'onyourside',
     'ooo',
     'open',
     'oracle',
@@ -1109,7 +1101,6 @@ TLDs = [
     'shouji',
     'show',
     'showtime',
-    'shriram',
     'si',
     'silk',
     'sina',
@@ -1143,7 +1134,6 @@ TLDs = [
     'space',
     'sport',
     'spot',
-    'spreadbetting',
     'sr',
     'srl',
     'ss',
@@ -1367,6 +1357,9 @@ TLDs = [
     'zone',
     'zuerich',
     'zw',
+]
+
+NON_ASCII_TLDS = [
     'ελ',
     'ευ',
     'бг',
@@ -1392,6 +1385,7 @@ TLDs = [
     'اتصالات',
     'ارامكو',
     'الاردن',
+    'البحرين',
     'الجزائر',
     'السعودية',
     'السعوديه',
@@ -1448,6 +1442,7 @@ TLDs = [
     'ලංකා',
     'คอม',
     'ไทย',
+    'ລາວ',
     'გე',
     'みんな',
     'アマゾン',

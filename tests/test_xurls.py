@@ -1,4 +1,4 @@
-# Copyright 2015 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
+# Copyright 2021 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
 # Licensed under BSD 3-Clause License.
 import pytest
 
@@ -183,9 +183,8 @@ def test_loosen_extra_cases():
             ('foo.com bar.com', 'foo.com'),
             ('foo.com-foo', 'foo.com'),
             ('foo.company', True),
-            # We can't use \b to not match foo.com here, because that
-            # does't work for non-ASCII TLDs.
-            ('foo.comrandom', 'foo.com'),
+            ('foo.comrandom', None),
+            ('some.guy', None),
             ('foo.example', True),
             ('foo.i2p', True),
             ('foo.local', True),

@@ -1,4 +1,4 @@
-# Copyright 2015 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
+# Copyright 2021 Andy Tzeng <andytzeng@aol.tw>. All Rights Reserved.
 # Licensed under BSD 3-Clause License.
 
 # Refer the tool unicodegen from mvdan.cc/xurls/v2
@@ -10,7 +10,7 @@
 #  * https://en.wikipedia.org/wiki/Category:Pseudo-top-level_domains
 #  * https://tools.ietf.org/html/draft-grothoff-iesg-special-use-p2p-names-00
 #  * https://www.iana.org/assignments/special-use-domain-names/special-use-domain-names.xhtml
-PseudoTLDs = [
+PSEUDO_TLDS = [
     'bit',  # Namecoin
     'example',  # Example domain
     'exit',  # Tor exit node
